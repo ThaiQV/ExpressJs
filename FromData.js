@@ -14,6 +14,10 @@ app.set('views', './');
 // for parsing application/json
 app.use(bodyParser.json()); 
 
+
+//The extended option allows to choose between parsing
+// the URL-encoded data with the querystring library (when false)
+// or the qs library (when true). 
 // for parsing application/xwww-
 app.use(bodyParser.urlencoded({ extended: true })); 
 //form-urlencoded
@@ -23,7 +27,7 @@ app.use(upload.array());
 app.use(express.static('public'));
 
 app.post('/', function(req, res){
-   console.log(req.body);
+   console.log(public.array);
    res.send("recieved your request!");
 });
 app.listen(3000);
